@@ -4,27 +4,24 @@
 }
 
 body {
-    background-color: #210431;
+    background-color: rgba(15, 4, 28, 1);
     font-size: 14px;
     color: #ffffff;
 }
 
-header {
-    background-color: #210431;
-}
+
 
 .limit {
-    max-width: 810px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .limit-main {
-    max-width: 810px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .a1 {
-    background-color: #210431;
     margin: 20px 5px;
 }
 
@@ -44,11 +41,12 @@ header {
 header .header-nav ul {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 2%;
 }
 
 .header-log {
-    flex: 1;
+    flex: 1%;
+    display: flex;
     text-align: center;
 }
 
@@ -63,9 +61,9 @@ header .header-nav ul {
 }
 
 .header-search input {
-    width: 193px;
-    height: 26px;
-    font-size: 12px;
+    width: 120%;
+    height: 100%;
+    /*font-size: 1vw;*/
     border: none;
     border-radius: 4px;
     padding: 5px 15px 5px 5px;
@@ -76,7 +74,7 @@ header .header-nav ul {
 
 .header-search i {
     position: relative;
-    right: 8px;
+    right: 10%;
     color: #aaa;
     font-size: 12px;
 }
@@ -109,7 +107,7 @@ a:hover {
     position: absolute;
     top: 100px;
     left: 0;
-    width: 1555px;
+    width: 100%;
     height: 361px;
     z-index: -1;
 }
@@ -148,8 +146,8 @@ a:hover {
 }
 
 .button--flex-button1 {
-    font-size: 16px;
-    width: 106px;
+    font-size: 12px;
+    max-width: 20% ;
     height: 32px;
     border-radius: 5px;
     background-color: #3DDEED;
@@ -158,13 +156,10 @@ a:hover {
     transition: background-color 0.3s;
 }
 
-/* .button--flex-button1:hover {
-    background-color: #3bc7e0;
-} */
 
 .button--flex-button2 {
-    font-size: 16px;
-    width: 83px;
+    font-size: 12px;
+    max-width: 30%;
     height: 32px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.02);
@@ -174,8 +169,9 @@ a:hover {
 }
 
 .image-img {
-    width: 570px;
-    height: 600px;
+    margin: 10%;
+    width: 70%;
+    height: 70%;
     margin-right: -50px;
 }
 
@@ -213,7 +209,7 @@ a:hover {
 
 .home__data2 {
     flex: 1;
-    padding-left: 0px;
+    padding-left: 0;
     margin-top: 310px;
     margin-left: -100px;
 }
@@ -260,43 +256,40 @@ a:hover {
 
 .right {
     transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
+    /*-webkit-transform: rotate(-45deg);*/
 }
 
-
-
-
+/*Game*/
 .game-title {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin: 20px 0;
+    padding-left: 10%;
+    gap: 10%;
+    margin: 2% 0;
 }
 
 .game-title .top {
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 2vw;
+    margin-bottom: 1vw;
 }
 
 .game-title p {
-    max-width: 300px;
-    font-size: 14px;
+    max-width: 40%;
+    font-size: 1vw;
     line-height: 1.5;
 }
 
 .button-container {
     display: flex;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 10%;
 }
 
 .button {
-    width: 50px;
-    height: 50px;
-    background-color: #61dafb;
+    height: 2.5vw;
+    width: 2.5vw;
+    background-color: rgb(17, 48, 204, 0.05);
     border: none;
-    border-radius: 50%;
+    border-radius: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,8 +298,10 @@ a:hover {
 }
 
 .button i {
-    color: #fff;
-    font-size: 20px;
+    color: #3ddeed;
+
+
+
 }
 
 .button:active {
@@ -317,16 +312,16 @@ a:hover {
     display: flex;
     overflow: hidden;
     max-width: 100%;
-    padding: 20px;
+    padding: 2%;
     justify-content: center;
-    gap: 20px;
+    gap: 2%;
+    flex-wrap: nowrap;
 }
 
 .game div {
-    flex: 0 0 250px;
-    background-color: #fff;
+    flex: 0 0 20%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
 }
 
@@ -341,29 +336,225 @@ a:hover {
 }
 
 .game p {
-    margin: 10px 0;
-    padding: 0 10px;
-    font-size: 14px;
+    margin: 1% 0;
+    padding: 0 2%;
+    font-size: 1vw;
 }
 
+
+/*Game*/
+
+/*FAQ*/
+.FAQ {
+    margin: 0 auto;
+    max-width: 50%;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.answer {
+    display: none;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    color: white;
+    border-radius: 5px;
+    padding: 3%;
+    box-sizing: border-box;
+    font-size: 1.5vw;
+}
+
+.answer i{
+    margin-left: auto;
+}
+
+.question-btn {
+    margin-bottom: 2%;
+    cursor: pointer;
+    padding: 3% 5%;
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 100%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.question-btn i {
+    margin-left: auto;
+}
+/*FAQ*/
+
+
+/*Footer*/
+footer {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 5%;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+.footer-limit {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    /*flex-wrap: nowrap;*/
+    /*gap: 1%;*/
+}
+#sub {
+    max-width: 30%;
+}
+.footer-block {
+    /*flex: 0 0 20%;*/
+    max-width: 20%;
+    /*margin: 3%;*/
+    min-width: 5%;
+}
+
+
+
+.footer-left {
+    max-width: 30%;
+    /*margin-left: 5%;*/
+}
+
+.footer-left .logo {
+    width: 80%;
+}
+
+.icons {
+    margin: 5% 0;
+}
+
+.icons i {
+    font-size: 2vw;
+    margin: 0 5%;
+    cursor: pointer;
+}
+
+.footer-name-menu {
+    font-weight: bold;
+    font-size: 1.5vw;
+    margin-bottom: 5%;
+}
+
+.footer-a {
+    color: #bbb;
+    text-decoration: none;
+    display: block;
+    margin: 2% 0;
+}
+
+.footer-a:hover {
+    color: #fff;
+}
+
+
+.input-group {
+    display: flex;
+}
+
+.input-group .form-control {
+    border: none;
+    padding: 5%;
+}
+
+.input-group .btn {
+    background-color: rgb(11, 102, 236);
+    /*color: rgba(255, 255, 255);*/
+    border: 1px;
+    cursor: pointer;
+}
+
+.form-control {
+    border: 0.57px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-line {
+    text-align: center;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #430e96, rgba(0, 0, 0, 0));
+}
+
+.footer-line p {
+    margin-top: 3%;
+    color: #bbb;
+}
+/*Footer*/
+
+
+
+/*Media*/
+
 @media (max-width: 768px) {
+    .background-line {
+        visibility: hidden;
+    }
+    .home__container {
+        flex-direction: column;
+    }
+
+    .home__container2 {
+        flex-direction: column;
+    }
+
     .game {
         flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .game div {
+        flex: 0 0 45%;
+    }
+
+    .game-title p {
+        max-width: 80%;
+        font-size: 2vw;
+    }
+    #sub {
+        max-width: 30%;
+    }
+    .footer-block {
+        /*flex: 0 0 20%;*/
+        max-width: 20%;
+        /*margin: 3%;*/
+        min-width: 5%;
     }
 }
 
 @media (max-width: 480px) {
+    .game-title {
+        flex-direction: column;
+        gap: 5%;
+        padding-left: 0;
+    }
+
     .game-title .top {
-        font-size: 24px;
+        font-size: 4vw;
     }
 
     .button {
-        width: 40px;
-        height: 40px;
+        width: 12%;
+        height: 12%;
     }
 
     .button i {
-        font-size: 16px;
+        font-size: 2vw;
     }
 
     .game div {
@@ -371,6 +562,78 @@ a:hover {
     }
 
     .game p {
-        font-size: 12px;
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .p-text{
+        display: none;
+    }
+    .button-container {
+        display: none;
+    }
+    #fact-4 {
+        display: none;
+    }
+    #fact-5 {
+        display: none;
+    }
+    #fact-6 {
+        display: none;
+    }
+    .footer-limit {
+        flex-wrap: wrap;
+    }
+    .footer-block {
+        flex: 0 0 45%;
+    }
+    #first-block {
+        width: 100%;
+    }
+    #second-block {
+        width: 50%;
+    }
+    #third-block {
+        width: 50%;
+    }
+    #sub {
+        width: 1vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-limit {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-block {
+        flex: 0 0 90%;
+    }
+    #sub {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-block {
+        flex: 0 0 100%;
+    }
+
+    .footer-name-menu {
+        font-size: 4vw;
+    }
+
+    .footer-left .logo {
+        width: 70%;
+    }
+
+    .icons i {
+        font-size: 4vw;
+    }
+
+    #sub {
+        max-width: 90%;
     }
 }

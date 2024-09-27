@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vtyVWOXTLQ88kTu6nifqMpBX4oCTiQPwL97PD7_LEfdrMP5IA2_Ud5DOjjQUA_ZGqgfzkdWvMhg6kF5IbgfRSIMrKqsNKUAQp9DxtGrlieQ" charset="UTF-8"></script><script src="https://kit.fontawesome.com/74ae139182.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 
@@ -25,7 +27,7 @@
                     </ul>
                 </div>
                 <div class="header-log">
-                    <span class="holo">Holo</span><span class="goze">Goze</span>
+                    <img src="images/logo.png" alt="">
                 </div>
                 <div class="header-search">
                     <div class="search-container">
@@ -43,7 +45,7 @@
 <main>
     <section class="home-section" id="home">
         <div>
-            <img src="images/background.png" alt="" class="background-line">
+            <img src="images/bg_effect.png" alt="" class="background-line">
         </div>
         <div class="limit-main">
             <div class="home__container container grid">
@@ -61,7 +63,7 @@
                         </div>
                         <div class="button-container">
                             <br>
-                            <a href="#" class="button--flex-button1">Visit Store   <i class="arrow right"></i></a>
+                            <a href="#" class="button--flex-button1">Visit Store<i class="arrow right"></i></a>
                             <a href="#" class="button button--flex-button2">Explore</a>
                         </div>
                         <div>
@@ -98,22 +100,22 @@
                     </div>
                     <div class="features-container">
                         <div class="feature-list">
-                            <div class="feature-item">
+                            <div class="feature-item" id="fact-1">
                                 <img src="images/star2.png" alt="Star" class="star-img"> High-resolution OLED or LCD screens: Provide sharp and clear visuals
                             </div>
-                            <div class="feature-item">
+                            <div class="feature-item" id="fact-2">
                                 <img src="images/star2.png" alt="Star" class="star-img"> Low latency for seamless experience
                             </div>
-                            <div class="feature-item">
+                            <div class="feature-item" id="fact-3">
                                 <img src="images/star2.png" alt="Star" class="star-img"> Wide field of view for immersion
                             </div>
-                            <div class="feature-item">
+                            <div class="feature-item" id="fact-4">
                                 <img src="images/star2.png" alt="Star" class="star-img"> Adjustable straps for comfort
                             </div>
-                            <div class="feature-item">
+                            <div class="feature-item" id="fact-5">
                                 <img src="images/star2.png" alt="Star" class="star-img"> Built-in audio for enhanced experience
                             </div>
-                            <div class="feature-item">
+                            <div class="feature-item" id="fact-6">
                                 <img src="images/star2.png" alt="Star" class="star-img"> Multiple connectivity options
                             </div>
                         </div>
@@ -136,7 +138,7 @@
     <section>
         <div class="game-title">
             <h1 class="top">Top Games</h1>
-            <p>If you buy video 2 games, you will receive 1 video game for free, along with a 50% discount.</p>
+            <p id="p-text">If you buy video 2 games, you will receive 1 video game for free, along with a 50% discount.</p>
             <div class="button-container">
                 <button class="button" id="leftBtn">
                     <i class="fa-solid fa-arrow-left"></i>
@@ -148,6 +150,14 @@
 
         </div>
         <div class="game" id="gameContainer">
+            <div><img src="images/game1.png" alt=""><p>Horizon : Call of the mountain</p></div>
+            <div><img src="images/game2.png" alt=""><p>Half - Life : ALYX</p></div>
+            <div><img src="images/game3.png" alt=""><p>Fight Night Champion</p></div>
+            <div><img src="images/game4.png" alt=""><p>Call of Duty : Coold War</p></div>
+            <div><img src="images/game1.png" alt=""><p>Horizon : Call of the mountain</p></div>
+            <div><img src="images/game2.png" alt=""><p>Half - Life : ALYX</p></div>
+            <div><img src="images/game3.png" alt=""><p>Fight Night Champion</p></div>
+            <div><img src="images/game4.png" alt=""><p>Call of Duty : Coold War</p></div>
             <div><img src="images/game1.png" alt=""><p>Horizon : Call of the mountain</p></div>
             <div><img src="images/game2.png" alt=""><p>Half - Life : ALYX</p></div>
             <div><img src="images/game3.png" alt=""><p>Fight Night Champion</p></div>
@@ -184,10 +194,35 @@ function animateButton(button) {
     }, 100);
 }
         </script>
+        <script>const gameContainer = document.getElementById('gameContainer');
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+gameContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+gameContainer.addEventListener('touchmove', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+});
+
+gameContainer.addEventListener('touchend', () => {
+    const swipeDistance = touchStartX - touchEndX;
+    if (swipeDistance > 50) {
+        gameContainer.scrollBy({
+            left: 250,
+            behavior: 'smooth'
+        });
+    } else if (swipeDistance < -50) {
+        gameContainer.scrollBy({
+            left: -250,
+            behavior: 'smooth'
+        });
+    }
+});
+</script>
     </section>
-
-
-
 
     <section>
         <div class="FAQ">
@@ -222,7 +257,7 @@ function animateButton(button) {
     <div class="container">
         <div class="footer-limit">
             <div class="row">
-                <div class="footer-block footer-left">
+                <div class="footer-block footer-left" id="first-block">
                     <img class="logo" src="images/logo.png"><br>
                     <div class="icons">
                         <i class="fa-brands fa-twitter"></i>
@@ -232,14 +267,14 @@ function animateButton(button) {
                     </div>
                     <p class="footer-a">+996 XXX XXX XXX</p>
                 </div>
-                <div class="footer-block">
+                <div class="footer-block" id="second-block">
                     <p class="footer-name-menu">Menu</p><br>
                     <a class="footer-a" href="">Home</a><br>
                     <a class="footer-a" href="">Catalog</a><br>
                     <a class="footer-a" href="">Features</a><br>
                     <a class="footer-a" href="">Cantact</a><br>
                 </div>
-                <div class="footer-block">
+                <div class="footer-block" id="third-block">
                     <p class="footer-name-menu">Company</p><br>
                     <a class="footer-a" href="">Login</a><br>
                     <a class="footer-a" href="">Sing up</a><br>
@@ -250,7 +285,7 @@ function animateButton(button) {
                     <p class="footer-name-menu">Subscribe Our News Letter</p><br>
                     <p class="footer-a">Sure, please provide your email address to subscribe to newsletter</p><br>
                     <div class="input-group mb-3">
-                      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="button-addon2">
                       <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
                     </div>
                 </div>
