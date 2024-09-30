@@ -27,7 +27,8 @@
                     </ul>
                 </div>
                 <div class="header-log">
-                    <img src="images/logo.png" alt="">
+                    <i class="fa-solid fa-bars" id="menu"></i>
+                    <img src="images/logo.png" alt="" class="img-logo">
                 </div>
                 <div class="header-search">
                     <div class="search-container">
@@ -35,7 +36,7 @@
                         <i class="fas fa-search"></i>
                     </div>
                     <div>
-                        <i class="fas fa-shopping-bag" style="font-size: 12px; margin-left: 10px;"></i>
+                        <i class="fas fa-shopping-bag" style="font-size: 12px; margin-left: 10px;" id="shop-icon"></i>
                     </div>
                 </div>
             </div>
@@ -43,7 +44,7 @@
     </div>
 </header>
 <main>
-    <section class="home-section" id="home">
+    <section class="section" id="home">
         <div>
             <img src="images/bg_effect.png" alt="" class="background-line">
         </div>
@@ -80,12 +81,13 @@
                 </div>
                 <div class="image">
                     <img src="images/image.png" alt="Virtual Headset" class="image-img">
+                    <img src="images/man.png" alt="Virtual Headset" class="image-img-man">
                 </div>
             </div>
         </div>
 
     </section>
-<section>
+    <section class="section">
         <div class="limit-main">
             <div class="home__container2 container grid">
                 <div class="image2">
@@ -130,12 +132,37 @@
             </div>
         </div>
     </section>
-    <section></section>
+    <section class="section">
+        <div class="limit-main">
+            <div class="home__container container grid">
+                <div class="div1">
+                    <div class="home__data3">
+                        <div class="home__header3">
+                            <h6 class="home__title3">JANE WILSON, GAMING CREATOR</h6>
+                        </div>
+                        <div class="home__footer">
+                            <div class="feature-item-3">
+                                <img src="images/star.png" alt="Star" class="star-img"> A virtual headset creator is an individual or company that specializes in designing and manufacturing virtual reality headsets, also known as VR headsets.
+                            </div>
+                            <div class="button-container1">
+                                <a href="#" class="button-blog">Read my blog</a>
+                            </div>
+                            <div class="img-users"><img src="images/users.png" alt=""><h6>+258k Views</h6></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="images">
+                    <img src="images/women.png" alt="Virtual Headset" class="image3-img">
+                    <img src="images/comment.png" alt="Virtual Headset" class="image4-img">
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
-
-
-    <section>
+<!--    -->
+    <section >
         <div class="game-title">
             <h1 class="top">Top Games</h1>
             <p id="p-text">If you buy video 2 games, you will receive 1 video game for free, along with a 50% discount.</p>
@@ -167,7 +194,7 @@
             <div><img src="images/game3.png" alt=""><p>Fight Night Champion</p></div>
             <div><img src="images/game4.png" alt=""><p>Call of Duty : Coold War</p></div>
         </div>
-        <script>
+        <script class="button-scroll">
 const leftBtn = document.getElementById('leftBtn');
 const rightBtn = document.getElementById('rightBtn');
 const gameContainer = document.getElementById('gameContainer');
@@ -185,8 +212,8 @@ rightBtn.addEventListener('click', () => {
     animateButton(rightBtn);
     scrollAmount += scrollStep;
     gameContainer.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-});
-
+});</script>
+        <script>
 function animateButton(button) {
     button.classList.add('active');
     setTimeout(() => {
@@ -194,7 +221,8 @@ function animateButton(button) {
     }, 100);
 }
         </script>
-        <script>const gameContainer = document.getElementById('gameContainer');
+<script class="touch-scroll">
+const gameContainer = document.getElementById('gameContainer');
 
 let touchStartX = 0;
 let touchEndX = 0;
@@ -224,7 +252,7 @@ gameContainer.addEventListener('touchend', () => {
 </script>
     </section>
 
-    <section>
+    <section class="section">
         <div class="FAQ">
             <h1 class="name-faq">F.A.Q.</h1>
             <button class="question-btn" onclick="toggleAnswer('answer1')">What are the different types of virtual headsets available?
